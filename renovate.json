@@ -8,9 +8,9 @@
         "^.github/workflows/lint.yml$"
       ],
       "matchStrings": [
-        "#\\s?renovate: depName=(?<depName>[^\\s]*?)\\sdatasource=(?<datasource>[^\\s]*?)\\s*version: \"?(?<currentValue>[\\w+\\.\\-]*)\"?",
-        "#\\s?renovate: depName=(?<depName>[^\\s]*?)\\sdatasource=(?<datasource>[^\\s]*?)\\s*version: \"?(?<currentValue>v[0-9]+\\.*)\"?"
-      ]
+        "#\\s?renovate: depName=(?<depName>[^\\s]*?)\\sdatasource=(?<datasource>[^\\s]*?)\\s*version: \"?(?<currentValue>[\\w+\\.\\-]*)\"?"
+      ],
+      "currentValueTemplate": "{{ lookup (split currentValue '.') 1 }}"
     }
   ]
 }
