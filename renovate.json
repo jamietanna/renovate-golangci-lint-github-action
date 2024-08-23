@@ -1,0 +1,15 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "customManagers": [
+    {
+      "description": "",
+      "customType": "regex",
+      "fileMatch": [
+        "^.github/workflows/lint.yml$"
+      ],
+      "matchStrings": [
+        "#\\s?renovate: depName=(?<depName>.*?) datasource=(?<datasource>.*?)\\s?version:\\s?\\\"?(?<currentValue>[\\w+\\.\\-]*)\""
+      ]
+    }
+  ]
+}
