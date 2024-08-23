@@ -8,7 +8,8 @@
         "^.github/workflows/lint.yml$"
       ],
       "matchStrings": [
-        "#\\s?renovate: depName=(?<depName>.*?) datasource=(?<datasource>.*?)\\s?version:\\s?\\\"?(?<currentValue>[\\w+\\.\\-]*)\""
+        "#\\s?renovate: depName=(?<depName>[^\\s]*?)\\sdatasource=(?<datasource>[^\\s]*?)\\s*version: \"?(?<currentValue>[\\w+\\.\\-]*)\"?",
+        "#\\s?renovate: depName=(?<depName>[^\\s]*?)\\sdatasource=(?<datasource>[^\\s]*?)\\s*version: \"?(?<currentValue>v[0-9]+\\.*)\"?"
       ]
     }
   ]

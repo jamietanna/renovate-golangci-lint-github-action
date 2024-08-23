@@ -23,4 +23,5 @@ jobs:
       - name: golangci-lint
         uses: golangci/golangci-lint-action@v6
         with:
-          version: v1.60
+          # renovate: depName=github.com/golangci/golangci-lint datasource=go
+          version: v1.58
